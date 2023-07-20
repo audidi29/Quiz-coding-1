@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Quiz Code</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <!-- Quiz Box -->
+        <div class="container">
+            <div class="quiz_box">
+                <!-- Title -->
+                <div class="title">View High Scores</div>
+                <!-- Timer -->
+                <div id="timer">Time: 30</div>
+                <!-- Time Line (Not shown in the code) -->
+                <div class="time_line"></div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Info Box -->
+        <div class="info_box">
+            <!-- Info Title -->
+            <div class="info-title"><span>Coding Quiz Challenge</span></div>
+            <!-- Info Subtitle -->
+            <div class="info-subtitle">
+                <!-- Information about the quiz -->
+                <div class="info">Try to answer the following code-related questions within the time limit.</div>
+                <div class="info">Keep in mind that incorrect answers will penalize your score/time by ten seconds!</div>
+            </div>
+            <!-- Buttons -->
+            <div class="buttons">
+                <!-- "Go Back" Button (Not shown in the code) -->
+                <button id="go_back">Go back</button>
+                <!-- "Start Quiz" Button -->
+                <button id="start_button" class="start_button">Start Quiz!</button>
+            </div>
+            <!-- Quiz Container -->
+            <div id="quiz_container" class="hide">
+                <div id="questions-div">
+                    <!-- Question Title -->
+                    <h2 id="title">Question</h2>
+                    <!-- Question Options -->
+                    <div id="options" class="options"></div>
+                </div>
+            </div>
+            <!-- End Screen (Not shown in the code) -->
+            <div id="end-screen" class="hide">
+                <h2>Finished</h2>
+                <p>Your final score: <span id="final-score"></span>.</p>
+                <p>
+                    Enter Name: <input type="text" id="initials" max="3" />
+                    <!-- "Submit" Button -->
+                    <button id="submit" class="saveScore">Submit!</button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript File -->
+    <script src="./assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Apply a CSS reset to remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the font family for the whole document */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Center the content in the container and set its max width */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styling for the quiz box */
+.quiz_box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Styling for the title in the quiz box */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styling for the info box */
+.info_box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Styling for the title in the info box */
+.info-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styling for the subtitle in the info box */
+.info-subtitle {
+  margin-bottom: 20px;
+}
+
+/* Styling for the info text in the info box */
+.info {
+  margin-bottom: 10px;
+}
+
+/* Styling for the buttons container */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Styling for the "Quit" button */
+.quit {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  /* border: none;
+  border-radius: 4px;
+  cursor: pointer; */
+}
+
+/* Styling for the "Start Quiz" button */
+.start_button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for the quiz container */
+#quiz_container {
+  margin-top: 20px;
+}
+
+/* Styling for the question title */
+#title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styling for the options container */
+.options {
+  margin-top: 10px;
+}
+
+/* Styling for each option button */
+.option {
+  display: flex;
+  margin-bottom: 5px;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* CSS class to hide elements */
+.hide {
+  display: none;
+}
+
+/* Styling for the end screen */
+#end-screen {
+  margin-top: 20px;
+}
+
+/* Styling for the final score text */
+#final-score {
+  font-weight: bold;
+}
