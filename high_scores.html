@@ -8,30 +8,26 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header>
-        <!-- High Scores Box -->
-        <div class="container">
-            <div class="quiz_box">
-                <!-- Title -->
-                <div class="title">High Scores</div>
-            </div>
-        </div>
-    </header>
+    <h1>High Scores</h1>
+    <div id="high-scores-list">
+        <!-- High scores will be displayed here -->
+    </div>
+    <button id="clear-high-scores">Clear High Scores</button>
 
-    <section>
-        <!-- High Scores List -->
-        <div class="info_box">
-            <div class="buttons">
-                <!-- "Go Back" Button -->
-                <button id="go_back">Go Back</button>
-                <!-- "Clear High Scores" Button -->
-                <button id="clear_scores">Clear High Scores</button>
-            </div>
-        </div>
-    </section>
-    
+    <script>
+        // Retrieve initials and score from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const initials = urlParams.get("initials");
+        const score = urlParams.get("score");
 
-    <!-- JavaScript File -->
-    <script src="./assets/high_scores.js"></script>
+        // Display initials and score on the page
+        const highScoresList = document.getElementById("high-scores-list");
+        const scoreEntry = document.createElement("div");
+        scoreEntry.textContent = `Initials: ${initials}, Score: ${score}`;
+        highScoresList.appendChild(scoreEntry);
+    </script>
+
+<script src="./assets/script.js" ></script>
 </body>
 </html>
+
