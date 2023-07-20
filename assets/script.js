@@ -12,10 +12,30 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerElement = document.getElementById("timer");
   const goBackButton = document.getElementById("go_back");
 
-  // Quiz data (Note: Adjust answer values to be zero-based, i.e., 0, 1, 2, ...)
+
+//   // Quiz data (Note: Adjust answer values to be zero-based, i.e., 0, 1, 2, ...)
   const quizData = [
-      // Questions and their options
-  ];
+    {
+        question: "Question 1 : HTML stands for",
+        options: ["1) Hyper Text Markup Language" , "2) Hyperlinks and Text Markup Language", "3) High Tech Markup Language", "4) Home Tool Markup Language"],
+        answer: 0,
+    },
+    {
+        question: "Question 2 : Which CSS property is used to change the text color of an element?",
+        options: ["1) font-family", "2) background-color", "3) color", "4) text-align"],
+        answer: 2,
+    },
+    {
+        question: "Question 3 : Which of the following is NOT a valid way to declare a variable in JavaScript?",
+        options: ["1) var myVar = 10", "2) let myVar = 10;", "3) const myVar = 10;", "4) variable myVar = 10;"],
+        answer: 3,
+    },
+    {
+        question: "Question 4: What is the purpose of the flexbox layout in CSS?",
+        options: ["1) To create responsive grid layouts", "2) To style HTML forms", "3) To add animation effects", "4) To manage the positioning and alignment of elements in a flexible way"],
+        answer: 3,
+    },
+];
 
   // Variables to track quiz state
   let currentQuestionIndex = 0;
@@ -124,6 +144,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Hide the Go Back button again
     goBackButton.classList.add("hide");
   }
+
+
+  // Function to save the initials and score in local storage
+  function saveScore() {
+    const initials = initialsInput.value.trim(); // Get the initials input value and remove leading/trailing spaces
+
+    if (initials !== "") {
+      // Check if initials are not empty
+      const highScores = JSON.parse(localStorage.getItem("highScores")) || []; // Get existing high scores from local storage or initialize an empty array
+      highScores.push({ initials: initials, score: score }); // Add the current initials and score to the high scores array
+      highScores.sort((a, b) => b.score - a.score); // Sort the high scores in descending order based on score
+
+      // Limit the high scores array to store only the top 5 scores
+      const topHighScores = highScores.slice(0, 5);
+
+      localStorage.setItem("highScores", JSON.stringify(topHighScores)); // Store the updated high scores in local storage
+
+      // Show the high scores screen (you can redirect to a separate high scores page or display them on the same page)
+      // For example, you can redirect to a high scores page using window.location.href:
+      window.location.href = "high_scores.html";
+    }
+  }
+
 
   // Add click event listeners to "Start Quiz," "Go Back," and "Submit" buttons
   startButton.addEventListener("click", startQuiz);
