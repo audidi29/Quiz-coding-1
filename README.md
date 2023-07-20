@@ -6,3 +6,4 @@ This was my first javascript coding and I can say that the struggle was real. Th
 ![Create a Quiz Code](https://github.com/audidi29/Quiz-coding-1/assets/131299841/530e7d46-eb99-4ce6-9dce-ff92190a3e3b)
 
 Link to deploy 
+https://audidi29.github.io/Quiz-coding-1/
